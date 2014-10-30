@@ -1,0 +1,20 @@
+<div class="panel-heading">
+	<a href="/#/students">
+		<i class="fa fa-chevron-left"></i>
+	</a>
+	<p class="text-center">Profile of  <em>{{student.first_name}} {{student.last_name}}</em>	</p>
+</div>
+<div class="panel-body student-profile">
+	<p>
+		<label for="">Age : </label> <em>{{student.age}}</em>
+	</p>
+	<p>
+		<label for="">Email : </label> <em>{{student.email}}</em>
+	</p>
+	<p>
+		<label for="">Gender : </label> <em>{{student.gender == 'm' ? 'Male' : 'Female'}}</em>
+	</p>
+
+	<a href="/#/students/{{student.id}}/edit" class="pull-right"> Edit	</a>
+</div>
+

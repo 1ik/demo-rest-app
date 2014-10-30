@@ -1,0 +1,13 @@
+<div class="panel-heading">
+	<p class="text-center">List of students	</p>
+</div>
+<div class="panel-body student-list">
+	<ul>
+		<li ng-repeat="student in students">
+			<a ng-click="show(student)" href="#/students/{{student.id}}">{{student.first_name}} {{student.last_name}}</a>
+			<a href="/#/students/{{student.id}}/edit" class="pull-right"> Edit	</a>
+			<a href="" class="pull-right" ng-click="delete(student)"> Delete </a>
+		</li>
+	</ul>
+	<button class="btn" ng-click="create_form()">CREATE</button>
+</div>

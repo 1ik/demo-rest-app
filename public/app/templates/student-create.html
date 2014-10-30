@@ -1,0 +1,46 @@
+<div class="panel-heading">
+	<a href="/#/students">
+		<i class="fa fa-chevron-left"></i>
+	</a>
+	<p class="text-center">Create A new Student</p>
+	<p class="green text-center" ng-show="message != undefined">{{message}}</p>
+	<p></p>
+</div>
+
+<div class="panel-body student-form">
+	<form role="form">
+	  <div class="form-group">
+	    <label for="first_name">First Name</label>
+	    <input type="text" class="form-control" ng-model="student.first_name" ng-class="">
+		<p class="error" ng-show="errors.first_name != undefined">{{errors.first_name[0]}}</p>
+	  </div>
+	  <div class="form-group">
+	    <label for="first_name">Last Name</label>
+	    <input type="text" class="form-control" ng-model="student.last_name">
+	    <p class="error" ng-show="errors.last_name != undefined">{{errors.last_name[0]}}</p>
+	  </div>
+	  <div class="form-group">
+	    <label for="first_name">Email</label>
+	    <input type="text" class="form-control" ng-model="student.email">
+	    <p class="error" ng-show="errors.email != undefined">{{errors.email[0]}}</p>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="first_name">Age</label>
+	    <input type="text"class="form-control" ng-model="student.age">
+	    <p class="error" ng-show="errors.age != undefined">{{errors.age[0]}}</p>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="gender">Gender</label>
+	    <select ng-model="student.gender">
+	    	<option value="m">Male</option>
+	    	<option value="f">Female</option>
+	    </select>
+	    <p class="error" ng-show="errors.gender != undefined">{{errors.gender[0]}}</p>
+	  </div>
+	  <button ng-click="save()" type="submit" class="btn" >Submit</button>
+	</form>
+
+
+</div>
